@@ -26,6 +26,18 @@ class JobApplicationController extends Controller
         // Redirect back with success message
         return redirect()->back()->with('success', 'Job application added successfully.');
     }
+
+    public function destroy($id)
+    {
+        // Find the job application by ID
+        $jobApplication = JobApplication::findOrFail($id);
+
+        // Delete the record
+        $jobApplication->delete();
+
+        // Redirect with a success message
+        return redirect()->back()->with('success', 'Job application deleted successfully.');
+    }
     
     public function index()
     {

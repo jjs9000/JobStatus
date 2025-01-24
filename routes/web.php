@@ -20,6 +20,7 @@ Route::get('main', Index::class)
 
 Route::middleware(['auth'])->group(function () {
     Route::post('/job-applications', [JobApplicationController::class, 'store'])->name('job-applications.store');
+    Route::delete('/job-applications/{id}', [JobApplicationController::class, 'destroy'])->name('job-applications.destroy');
 });
 
 require __DIR__.'/auth.php';
