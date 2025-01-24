@@ -29,15 +29,15 @@
                                 <div class="grid grid-cols-2 gap-4">
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700">Company</label>
-                                        <input type="text" name="company" class="w-full border p-2 rounded mt-1" placeholder="Company" required>
+                                        <input wire:model="company" type="text" name="company" class="w-full p-2 mt-1 border rounded" placeholder="Company" required>
                                     </div>
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700">Job</label>
-                                        <input type="text" name="job" class="w-full border p-2 rounded mt-1" placeholder="Job" required>
+                                        <input wire:model="job" type="text" name="job" class="w-full p-2 mt-1 border rounded" placeholder="Job" required>
                                     </div>
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700">Status</label>
-                                        <select name="status" class="w-full border p-2 rounded mt-1" required>
+                                        <select wire:model="status" name="status" class="w-full p-2 mt-1 border rounded" required>
                                             <option value="applied">Applied</option>
                                             <option value="contacted">Contacted</option>
                                             <option value="interviewed">Interviewed</option>
@@ -48,19 +48,19 @@
                                     </div>
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700">Location</label>
-                                        <input type="text" name="location" class="w-full border p-2 rounded mt-1" placeholder="Location" required>
+                                        <input wire:model="location" type="text" name="location" class="w-full p-2 mt-1 border rounded" placeholder="Location" required>
                                     </div>
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700">Responsibilities</label>
-                                        <textarea name="responsibilities" class="w-full border p-2 rounded mt-1" placeholder="Responsibilities"></textarea>
+                                        <textarea wire:model="responsibilities" name="responsibilities" class="w-full p-2 mt-1 border rounded" placeholder="Responsibilities"></textarea>
                                     </div>
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700">Allowance (RM)</label>
-                                        <input type="number" name="allowance" class="w-full border p-2 rounded mt-1" placeholder="Allowance">
+                                        <input wire:model="allowance" type="number" name="allowance" class="w-full p-2 mt-1 border rounded" placeholder="Allowance">
                                     </div>
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700">Platform</label>
-                                        <input type="text" name="platform" class="w-full border p-2 rounded mt-1" placeholder="Platform (e.g., LinkedIn, Jobstreet)" required>
+                                        <input wire:model="platform" type="text" name="platform" class="w-full p-2 mt-1 border rounded" placeholder="Platform (e.g., LinkedIn, Jobstreet)" required>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                     <button type="submit" class="w-full px-4 py-2 mt-3 font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
                         Save
                     </button>
-                    <button type="button" @click="open = false" class="w-full px-4 py-2 mt-3 font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                    <button type="button" wire:click="closeModal" class="w-full px-4 py-2 mt-3 font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
                         Close
                     </button>
                 </div>
